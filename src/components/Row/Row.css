@@ -1,12 +1,11 @@
 .row {
    padding: 10px;
-   margin-left: 10px;
-
    color: white;
 }
 
 .row__header {
    margin-bottom: 10px;
+   font-size: 18px;
    text-transform: uppercase;
 }
 
@@ -15,6 +14,10 @@
    object-fit: contain;
    overflow-y: hidden;
    overflow-x: scroll;
+}
+
+.posters::-webkit-scrollbar {
+   display: none;
 }
 
 .poster img {
@@ -29,7 +32,7 @@
    position: relative;
 }
 .poster__large img {
-   width: 500px;
+   width: 430px;
    height: 95%;
    border-radius: 5px;
    margin-right: 8px;
@@ -42,7 +45,7 @@
    z-index: 10;
    height: 50%;
    bottom: 170px;
-   width: 500px;
+   width: 430px;
    /* background: linear-gradient(
       180deg,
       rgba(37, 37, 37, 0),
@@ -57,9 +60,9 @@
    z-index: 15;
    color: white;
    position: relative;
-   width: 500px;
+   width: 430px;
    height: 170px;
-   margin-top: -160px;
+   margin-top: -170px;
    display: flex;
    flex-direction: column;
    align-items: left;
@@ -78,7 +81,8 @@
 }
 
 .poster__content h2 {
-   font-size: 1.8rem;
+   font-size: 18px;
+   font-weight: 700;
    padding-left: 1.5rem;
 }
 
@@ -112,4 +116,45 @@
    font-size: 1.1rem;
    margin-left: 3px;
    margin-top: 2px;
+}
+
+/* RowLong styling */
+
+.row__long {
+   border-radius: 5px;
+   height: 780px;
+   position: relative;
+}
+
+.row_long_content {
+   position: absolute;
+   z-index: 10;
+   bottom: 0;
+   left: 0;
+   padding: 3rem;
+}
+
+.row_long_content h4 {
+   font-size: 0.7rem;
+   margin-bottom: 10px;
+}
+
+.row_long_content h1 {
+   margin-bottom: 10px;
+   letter-spacing: 1px;
+   font-size: 3rem;
+}
+
+.row_long_content p {
+   max-width: 500px;
+   margin-bottom: 20px;
+   line-height: 1.5;
+   font-size: 1.1rem;
+}
+
+.row_long_gradient {
+   position: absolute;
+   left: 0;
+   height: 100%;
+   width: 100%;
 }

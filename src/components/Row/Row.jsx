@@ -6,7 +6,7 @@ import {
    posterGradient,
    contentBackground,
    buttonBackground,
-} from "./RowColoring";
+} from "./../RandomColoring";
 
 // TODO add random colors to each large poster
 
