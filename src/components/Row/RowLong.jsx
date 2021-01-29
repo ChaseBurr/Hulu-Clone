@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "./../../axios";
+import { leftGradient } from "./../RandomColoring";
+
 const base_url = "https://image.tmdb.org/t/p/original";
 
 function RowLong({ fetchUrl }) {
@@ -27,12 +29,18 @@ function RowLong({ fetchUrl }) {
             <p>{show?.overview}</p>
             <div className="row_long_button">
                <button className="btn btn-filled">
-                  <i className="fas fa-play"> PLAY</i>
+                  <i className="fas fa-play"></i> PLAY
                </button>
                <button className="btn btn-outline">DETAILS</button>
             </div>
          </div>
-         <div className="row_long_gradient"></div>
+         <div
+            className="row_long_gradient"
+            style={{
+               background:
+                  leftGradient[Math.floor(Math.random() * leftGradient.length)],
+            }}
+         ></div>
       </div>
    );
 }
