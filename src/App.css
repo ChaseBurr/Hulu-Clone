@@ -11,3 +11,28 @@
 body {
    background-color: rgba(29, 32, 37, 1);
 }
+
+.container {
+   width: 100%;
+   padding: 2.8rem;
+}
+
+.btn {
+   border: none;
+   border-radius: 4px;
+   padding: 14px 22px;
+   margin-right: 8px;
+   letter-spacing: 1px;
+   font-weight: 700;
+   color: white;
+}
+
+.btn-outline {
+   border: 2px solid rgb(58, 56, 51);
+   background-color: transparent;
+}
+
+.btn-filled {
+   border: 2px solid rgb(58, 56, 51);
+   background-color: rgb(29, 28, 25);
+}
