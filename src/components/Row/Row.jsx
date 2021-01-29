@@ -14,6 +14,7 @@ const base_url = "https://image.tmdb.org/t/p/original";
 
 function Row({ header, isLarge, fetchUrl }) {
    const [shows, setShows] = useState([]);
+   const randomRowId = Math.floor(Math.random() * 100);
    let gradientNumber = 0;
 
    useEffect(() => {
@@ -25,9 +26,19 @@ function Row({ header, isLarge, fetchUrl }) {
    }, [fetchUrl]);
 
    return (
-      <div className="row">
+      <div className={`row`}>
          <h2 className="row__header">{header}</h2>
-         <div className="posters">
+         <div className={`posters row_id_${randomRowId}`}>
+            <button
+               className="button__left"
+               onClick={() => {
+                  document.querySelector(
+                     `.row_id_${randomRowId}`
+                  ).scrollLeft -= 1000;
+               }}
+            >
+               <i className="fas fa-arrow-left"></i>
+            </button>
             {shows.map((show) => (
                <>
                   <div
@@ -79,6 +90,16 @@ function Row({ header, isLarge, fetchUrl }) {
                   </div>
                </>
             ))}
+            <button
+               className="button__right"
+               onClick={() => {
+                  document.querySelector(
+                     `.row_id_${randomRowId}`
+                  ).scrollLeft += 1000;
+               }}
+            >
+               <i className="fas fa-arrow-right"></i>
+            </button>
          </div>
       </div>
    );

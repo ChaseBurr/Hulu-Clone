@@ -2,6 +2,7 @@
    padding: 10px;
    color: white;
    margin-top: 20px;
+   position: relative;
 }
 
 .row__header {
@@ -15,6 +16,7 @@
    object-fit: contain;
    overflow-y: hidden;
    overflow-x: scroll;
+   scroll-behavior: smooth;
 }
 
 .posters::-webkit-scrollbar {
@@ -161,4 +163,41 @@
    height: 100%;
    width: 100%;
    margin-top: -10px;
+}
+
+/* Row Buttons */
+.button__left,
+.button__right {
+   position: absolute;
+   z-index: 100;
+   top: 50%;
+   transform: translateY(-50%);
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+   border: none;
+   cursor: pointer;
+   background-color: rgb(34, 47, 62);
+   color: white;
+   font-size: 1.3rem;
+   /* margin-left: -20px; */
+}
+
+.button__left:focus,
+.button__right:focus {
+   outline: none;
+}
+
+.button__left i,
+.button__right i {
+   margin-top: 3px;
+}
+
+.button__right {
+   right: 0;
+   margin-right: -25px;
+}
+
+.button__left {
+   margin-left: -25px;
 }
