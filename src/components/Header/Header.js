@@ -16,8 +16,6 @@ function Header({ fetchUrl }) {
       fetchData();
    }, []);
 
-   console.table(show);
-
    return (
       <header
          className="header"
