@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "./../../axios";
 import "./Header.css";
-import { headerGradient } from "./../RandomColoring";
+import { leftGradient } from "./../RandomColoring";
 
 const base_url = "https://image.tmdb.org/t/p/original";
 
@@ -40,9 +40,7 @@ function Header({ fetchUrl }) {
             className="header__gradient"
             style={{
                background:
-                  headerGradient[
-                     Math.floor(Math.random() * headerGradient.length)
-                  ],
+                  leftGradient[Math.floor(Math.random() * leftGradient.length)],
             }}
          ></div>
       </header>
