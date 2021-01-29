@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
@@ -17,9 +18,13 @@ function Navbar() {
             alt=""
          />
          <ul className="nav__items">
-            <li className="nav__item">HOME</li>
+            <li className="nav__item">
+               <Link to="/">HOME</Link>
+            </li>
             <li className="nav__item">MY STUFF</li>
-            <li className="nav__item">TV SHOWS</li>
+            <li className="nav__item">
+               <Link to="/tv">TV SHOWS</Link>
+            </li>
             <li className="nav__item">MOVIES</li>
             <li className="nav__item">HUBS</li>
          </ul>
