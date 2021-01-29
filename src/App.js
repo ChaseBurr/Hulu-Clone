@@ -1,7 +1,7 @@
 import "./App.css";
 
 // Component imports
-import { Row, Header, RowLong } from "./components/exports";
+import { Row, Header, RowLong, Navbar } from "./components/exports";
 
 // API
 import requests from "./requests";
@@ -9,6 +9,7 @@ import requests from "./requests";
 function App() {
    return (
       <div className="App">
+         <Navbar />
          <Header fetchUrl={requests.fetchHuluOriginals} />
          <div className="container">
             <Row
