@@ -67,21 +67,53 @@ export const buttonBackground = [
    "rgb(131, 149, 167)",
 ];
 
-export const headerGradient = [
+export const leftGradient = [
+   `linear-gradient(
+      -80deg,
+      rgb(72, 219, 251, 0),
+      rgb(72, 219, 251, 0.3),
+      rgb(72, 219, 251, 0.6),
+      rgb(72, 219, 251, 0.9),
+      rgb(72, 219, 251)
+   )`,
+   `linear-gradient(
+      -80deg,
+      rgba(37, 37, 37, 0),
+      rgba(37, 37, 37, 0.3),
+      rgba(37, 37, 37, 0.6),
+      rgba(37, 37, 37, 0.9),
+      rgba(37, 37, 37, 1)
+   )`,
    `linear-gradient(
       -80deg,
       rgb(255, 107, 107, 0),
       rgb(255, 107, 107, 0.3),
       rgb(255, 107, 107, 0.6),
-      rgb(255, 107, 107, 0.9),
+      rgb(255, 107, 107, 0.8),
       rgb(255, 107, 107, 1)
    )`,
    `linear-gradient(
       -80deg,
-      rgb(16, 172, 132, .1),
+      rgb(16, 172, 132, 0),
       rgb(16, 172, 132, 0.3),
       rgb(16, 172, 132, 0.6),
       rgb(16, 172, 132, 0.9),
       rgb(16, 172, 132, 1)
+   )`,
+   `linear-gradient(
+      -80deg,
+      rgb(95, 39, 205, 0),
+      rgb(95, 39, 205, 0.3),
+      rgb(95, 39, 205, 0.6),
+      rgb(95, 39, 205, 0.9),
+      rgb(95, 39, 205, 1)
+   )`,
+   `linear-gradient(
+      -80deg,
+      rgb(200, 214, 229, 0),
+      rgb(200, 214, 229, 0.3),
+      rgb(200, 214, 229, 0.6),
+      rgb(200, 214, 229, 0.9),
+      rgb(200, 214, 229, 1)
    )`,
 ];
