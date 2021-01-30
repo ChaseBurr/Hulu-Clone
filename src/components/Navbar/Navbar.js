@@ -27,8 +27,12 @@ function Navbar({ active }) {
             <li className="nav__item">
                <Link to="/tv">TV SHOWS</Link>
             </li>
-            <li className="nav__item">MOVIES</li>
-            <li className="nav__item">HUBS</li>
+            <li className="nav__item">
+               <Link to="/movies">MOVIES</Link>
+            </li>
+            <li className="nav__item">
+               <Link to="/hubs">HUBS</Link>
+            </li>
          </ul>
          <div className="user_items">
             <i className="fas fa-search"></i>

@@ -1,7 +1,7 @@
 nav {
    width: 100%;
    position: fixed;
-   z-index: 100;
+   z-index: 500;
    display: flex;
    align-items: stretch;
    justify-content: space-between;
