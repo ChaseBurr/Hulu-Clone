@@ -1,13 +1,11 @@
 import "./App.css";
 
-import { useState } from "react";
-
 // Component imports
 import { Navbar } from "./components/exports";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 // Pages
-import { Home, TV } from "./pages/exports";
+import { Home, TV, Movies, Hubs } from "./pages/exports";
 
 // App Component
 function App() {
@@ -18,6 +16,8 @@ function App() {
             <Switch>
                <Route exact path="/" component={Home} />
                <Route exact path="/tv" component={TV} />
+               <Route exact path="/movies" component={Movies} />
+               <Route exact path="/hubs" component={Hubs} />
             </Switch>
          </Router>
       </div>
