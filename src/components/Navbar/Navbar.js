@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ active }) {
    const [scroll, setScroll] = useState(false);
 
    window.addEventListener("scroll", () => {
@@ -10,18 +10,20 @@ function Navbar() {
          setScroll(true);
       } else setScroll(false);
    });
+
    return (
       <nav className={scroll && "navbar__filled"}>
-         <img
-            className="nav__logo"
-            src="https://cdn.worldvectorlogo.com/logos/hulu.svg"
-            alt=""
-         />
+         <Link to="/">
+            <img
+               className="nav__logo"
+               src="https://cdn.worldvectorlogo.com/logos/hulu.svg"
+               alt=""
+            />
+         </Link>
          <ul className="nav__items">
             <li className="nav__item">
                <Link to="/">HOME</Link>
             </li>
-            <li className="nav__item">MY STUFF</li>
             <li className="nav__item">
                <Link to="/tv">TV SHOWS</Link>
             </li>

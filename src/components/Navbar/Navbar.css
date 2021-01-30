@@ -59,3 +59,11 @@ nav {
 .user_items i:not(:last-child) {
    margin-right: 30px;
 }
+
+.active {
+   background-color: rgb(36, 39, 46);
+}
+
+.active:hover {
+   background-color: rgb(36, 39, 46, 0.8);
+}
