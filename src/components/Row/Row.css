@@ -235,3 +235,31 @@
    font-size: 1.2rem;
    color: lightgreen;
 }
+
+/* RowHalf */
+.row__half {
+   width: 50%;
+   height: 500px;
+   border-radius: 4px;
+   margin-right: 5px;
+   position: relative;
+}
+
+.row__half__content {
+   position: absolute;
+   padding: 2rem;
+   bottom: 0;
+}
+
+.row__half__content h1 {
+   font-size: 3rem;
+   margin-bottom: 10px;
+}
+
+.row_half_gradient {
+   border-radius: 4px;
+   position: absolute;
+   left: 0;
+   height: 500px;
+   width: 100%;
+}

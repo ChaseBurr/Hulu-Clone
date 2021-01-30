@@ -13,7 +13,7 @@ function RowLong({ fetchUrl }) {
          setShow(data.results[Math.floor(Math.random() * data.results.length)]);
       }
       fetchData();
-   }, []);
+   }, [fetchUrl]);
 
    return (
       <div

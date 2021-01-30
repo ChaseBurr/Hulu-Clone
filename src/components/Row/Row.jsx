@@ -8,14 +8,11 @@ import {
    buttonBackground,
 } from "./../RandomColoring";
 
-// TODO add random colors to each large poster
-
 const base_url = "https://image.tmdb.org/t/p/original";
 
 function Row({ header, isLarge, fetchUrl }) {
    const [shows, setShows] = useState([]);
    const [isLoading, setIsLoading] = useState(false);
-   const [rowId, setRowId] = useState(0);
    const randomRowId = Math.floor(Math.random() * 100);
    let gradientNumber = 0;
 
@@ -31,7 +28,7 @@ function Row({ header, isLarge, fetchUrl }) {
    return (
       <>
          {isLoading && (
-            <div className={`row`} key={rowId}>
+            <div className={`row`}>
                <h2 className="row__header">{header}</h2>
                <div className={`posters row_id_${randomRowId}`}>
                   <button
