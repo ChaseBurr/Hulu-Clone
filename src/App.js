@@ -1,5 +1,7 @@
 import "./App.css";
 
+import { useState } from "react";
+
 // Component imports
 import { Navbar } from "./components/exports";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
@@ -14,8 +16,8 @@ function App() {
          <Router>
             <Navbar />
             <Switch>
-               <Route path="/" component={Home} />
-               <Route path="/tv" component={TV} />
+               <Route exact path="/" component={Home} />
+               <Route exact path="/tv" component={TV} />
             </Switch>
          </Router>
       </div>
