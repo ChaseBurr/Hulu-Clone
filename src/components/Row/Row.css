@@ -140,7 +140,7 @@
 
 .row_long_content h4 {
    font-size: 0.7rem;
-   margin-bottom: 10px;
+   margin-bottom: 5px;
 }
 
 .row_long_content h1 {
@@ -200,4 +200,38 @@
 
 .button__left {
    margin-left: -25px;
+}
+
+/* Genre */
+.genre_row {
+   margin-top: 50px;
+}
+
+.genre_row .posters {
+   display: flex;
+   overflow: hidden;
+}
+
+.genre {
+   width: 350px;
+   flex-shrink: 0;
+   height: 200px;
+   margin-right: 5px;
+   background-color: black;
+   border-radius: 4px;
+   position: relative;
+   cursor: pointer;
+}
+
+.genre__name {
+   bottom: 0;
+   position: absolute;
+   padding: 0 0 1.2rem 1rem;
+}
+
+.genre__name h1 {
+   text-transform: capitalize;
+   letter-spacing: 1px;
+   font-size: 1.2rem;
+   color: lightgreen;
 }
