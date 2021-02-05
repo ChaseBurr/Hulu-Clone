@@ -1,4 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// const webpack = require("webpack");
+const Dotenv = require("dotenv-webpack");
 const path = require("path");
 
 module.exports = {
@@ -41,5 +43,7 @@ module.exports = {
                template: path.resolve(__dirname, "public/index.html"),
                filename: "index.html",
           }),
+          new Dotenv(),
      ],
+     target: "node",
 };
