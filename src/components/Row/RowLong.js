@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
-import axios from "./../../axios";
-import "./Header.css";
-import { leftGradient } from "./../RandomColoring";
+import React, { useEffect, useState } from "react";
+import axios from "../../axios";
+import { leftGradient } from "../RandomColoring";
 
 const base_url = "https://image.tmdb.org/t/p/original";
 
-function Header({ fetchUrl }) {
+function RowLong({ fetchUrl }) {
      const [show, setShow] = useState([]);
 
      useEffect(() => {
@@ -18,21 +17,21 @@ function Header({ fetchUrl }) {
                );
           }
           fetchData();
-          console.log(show);
      }, [fetchUrl]);
 
      return (
-          <header
-               className="header"
+          <div
+               className="row row__long"
                style={{
                     backgroundSize: "cover",
                     backgroundImage: `url(${base_url}${show?.backdrop_path})`,
                }}
           >
-               <div className="header__content">
+               <div className="row_long_content">
+                    <h4>WATCH MOVIE</h4>
                     <h1>{show?.name || show?.original_title}</h1>
-                    <p>{show.overview}</p>
-                    <div className="header__buttons">
+                    <p>{show?.overview}</p>
+                    <div className="row_long_button">
                          <button className="btn btn-filled">
                               <i className="fas fa-play"></i> PLAY
                          </button>
@@ -40,7 +39,7 @@ function Header({ fetchUrl }) {
                     </div>
                </div>
                <div
-                    className="header__gradient"
+                    className="row_long_gradient"
                     style={{
                          background:
                               leftGradient[
@@ -50,8 +49,8 @@ function Header({ fetchUrl }) {
                               ],
                     }}
                ></div>
-          </header>
+          </div>
      );
 }
 
-export default Header;
+export default RowLong;
