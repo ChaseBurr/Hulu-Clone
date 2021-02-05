@@ -4,7 +4,7 @@ const Dotenv = require("dotenv-webpack");
 const path = require("path");
 
 module.exports = {
-     mode: "development",
+     mode: process.env.production_mode,
      entry: path.resolve(__dirname, "src/index.js"),
      performance: {
           maxAssetSize: 100000,
@@ -38,6 +38,10 @@ module.exports = {
                },
           ],
      },
+     output: {
+          path: path.resolve(__dirname, "build"),
+          filename: "main.[contenthash].js",
+     },
      plugins: [
           new HtmlWebpackPlugin({
                template: path.resolve(__dirname, "public/index.html"),
@@ -45,5 +49,4 @@ module.exports = {
           }),
           new Dotenv(),
      ],
-     target: "node",
 };
